@@ -1,0 +1,34 @@
+language: yaml
+version: "3.0"
+
+nlu:
+  - intent: request_recipe
+    examples: |
+      - I want a recipe for [pasta](ingredient)
+      - Can you give me a recipe for [chicken curry](ingredient)?
+      - Show me how to make [chocolate cake](ingredient)
+      - I need a recipe that includes [tomatoes](ingredient) and [basil](ingredient)
+      - What can I cook with [rice](ingredient) and [beans](ingredient)?
+
+  - intent: provide_ingredients
+    examples: |
+      - The ingredients I have are [onions](ingredient), [garlic](ingredient), and [chicken](ingredient)
+      - I have [spinach](ingredient) and [cheese](ingredient), what can I make?
+      - I want to use [potatoes](ingredient) and [carrots](ingredient) in my recipe
+
+  - intent: ask_for_help
+    examples: |
+      - Can you help me with a recipe?
+      - I need assistance in cooking
+      - Help me find a recipe for [vegetarian](ingredient) dish
+
+entities:
+  - ingredient
+
+responses:
+  utter_ask_ingredients:
+    - text: "What ingredients do you have?"
+  utter_recipe_generated:
+    - text: "Here is a recipe for you: {recipe}"
+  utter_default:
+    - text: "I'm sorry, I didn't understand that. Can you please rephrase?"

@@ -1,0 +1,91 @@
+name,category
+chicken,protein
+beef,protein
+pork,protein
+turkey,protein
+eggs,protein
+tofu,protein
+shrimp,protein
+fish,protein
+lamb,protein
+chickpeas,protein
+milk,dairy
+cheese,dairy
+butter,dairy
+yogurt,dairy
+cream,dairy
+sour cream,dairy
+ricotta,dairy
+parmesan,dairy
+mozzarella,dairy
+feta,dairy
+tomato,vegetable
+onion,vegetable
+garlic,vegetable
+bell pepper,vegetable
+carrot,vegetable
+broccoli,vegetable
+spinach,vegetable
+lettuce,vegetable
+potato,vegetable
+zucchini,vegetable
+cucumber,vegetable
+mushrooms,vegetable
+corn,vegetable
+peas,vegetable
+kale,vegetable
+sweet potato,vegetable
+celery,vegetable
+avocado,vegetable
+apple,fruit
+banana,fruit
+orange,fruit
+lemon,fruit
+lime,fruit
+berries,fruit
+grapes,fruit
+melon,fruit
+pineapple,fruit
+mango,fruit
+rice,grain
+pasta,grain
+flour,grain
+bread,grain
+oats,grain
+quinoa,grain
+couscous,grain
+tortillas,grain
+noodles,grain
+barley,grain
+basil,herb
+oregano,herb
+thyme,herb
+rosemary,herb
+cilantro,herb
+mint,herb
+parsley,herb
+cinnamon,spice
+cumin,spice
+paprika,spice
+turmeric,spice
+ginger,spice
+salt,spice
+pepper,spice
+nutmeg,spice
+curry powder,spice
+bay leaf,herb
+chili powder,spice
+olive oil,oil
+soy sauce,sauce
+vinegar,condiment
+mayonnaise,condiment
+ketchup,condiment
+mustard,condiment
+honey,sweetener
+maple syrup,sweetener
+hot sauce,sauce
+salsa,sauce
+tomato sauce,sauce
+tahini,sauce
+peanut butter,spread
+coconut milk,sauce

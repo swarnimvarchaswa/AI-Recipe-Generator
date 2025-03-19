@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}AI Recipe Generator - Find Recipes{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto">
+    <!-- Search Card -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+        <div class="p-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Find Your Perfect Recipe</h2>
+            
+            <p class="text-center text-gray-600 mb-8">
+                Enter ingredients, cuisine type, or meal type to find matching recipes
+            </p>
+            
+            <form action="/search" method="post" class="mb-6">
+                <div class="flex flex-col md:flex-row gap-3">
+                    <input type="text" name="query" 
+                           class="flex-grow rounded-lg border-gray-300 border px-4 py-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
+                           placeholder="Try 'italian dinner' or 'dessert with chocolate'" required>
+                    <button type="submit" 
+                            class="bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-lg px-6 py-3 font-medium hover:from-orange-600 hover:to-amber-600 transition shadow-sm">
+                        Find Recipes
+                    </button>
+                </div>
+            </form>
+            
+            <div class="flex flex-wrap gap-2 justify-center text-sm mb-4">
+                <span class="text-gray-500">Try these examples:</span>
+                <a href="#" onclick="document.querySelector('input[name=query]').value='italian'" class="text-blue-600 hover:underline">italian</a>
+                <a href="#" onclick="document.querySelector('input[name=query]').value='eggs, bacon'" class="text-blue-600 hover:underline">eggs, bacon</a>
+                <a href="#" onclick="document.querySelector('input[name=query]').value='dessert with chocolate'" class="text-blue-600 hover:underline">dessert with chocolate</a>
+                <a href="#" onclick="document.querySelector('input[name=query]').value='vegetarian dinner'" class="text-blue-600 hover:underline">vegetarian dinner</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Card -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-4">Recipe Collection</h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Total Recipes -->
+                <div class="bg-blue-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-blue-600">{{ stats.total }}</div>
+                    <div class="text-sm text-gray-600 mt-1">Total Recipes</div>
+                </div>
+                
+                <!-- Desserts -->
+                <div class="bg-pink-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-pink-500">{{ stats.desserts }}</div>
+                    <div class="text-sm text-gray-600 mt-1">Desserts</div>
+                </div>
+                
+                <!-- Italian -->
+                <div class="bg-green-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-green-600">{{ stats.italian }}</div>
+                    <div class="text-sm text-gray-600 mt-1">Italian Dishes</div>
+                </div>
+                
+                <!-- Breakfast -->
+                <div class="bg-yellow-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-yellow-600">{{ stats.breakfast }}</div>
+                    <div class="text-sm text-gray-600 mt-1">Breakfast Options</div>
+                </div>
+                
+                <!-- Mexican -->
+                <div class="bg-red-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-red-600">{{ stats.mexican }}</div>
+                    <div class="text-sm text-gray-600 mt-1">Mexican Recipes</div>
+                </div>
+                
+                <!-- Vegetarian -->
+                <div class="bg-emerald-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-emerald-600">{{ stats.vegetarian }}</div>
+                    <div class="text-sm text-gray-600 mt-1">Vegetarian Options</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

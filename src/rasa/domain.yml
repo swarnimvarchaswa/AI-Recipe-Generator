@@ -1,0 +1,22 @@
+intents:
+  - greet
+  - goodbye
+  - generate_recipe
+
+entities:
+  - ingredient
+
+slots:
+  ingredient:
+    type: text
+    influence_conversation: false
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you with recipes today?"
+  utter_goodbye:
+    - text: "Goodbye! Happy cooking!"
+  utter_ask_ingredient:
+    - text: "What ingredient would you like to use for your recipe?"
+  utter_recipe_generated:
+    - text: "Here is your recipe based on the ingredient: {ingredient}"
