@@ -172,3 +172,5 @@ if __name__ == "__main__":
         print_colorful("\nThank you for using the AI Recipe Generator! Goodbye! 👋", "1;35")
     except Exception as e:
         print_colorful(f"An error occurred: {e}", "31")
+
+        # commit
